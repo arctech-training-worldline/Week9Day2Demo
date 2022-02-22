@@ -1,0 +1,8 @@
+﻿Requirement
+Create a CRUD page - Create, Read, Update, Delete
+
+1. Create Student Table (RollNo int, Name varchar(100), DateOfBirth date, Percentage float) 
+done...
+2. Create aspx page to display student records in grid format. Enable pagination on the grid
+done...
+3. Enable Add, Edit & Delete

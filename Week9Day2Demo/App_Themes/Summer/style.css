@@ -1,0 +1,34 @@
+﻿/* table style */
+body {
+    font-family: Arial;
+}
+
+table {
+    border: solid 1px #84a360;
+}
+
+/* header cell style */
+th {
+    color: #376f18;
+    border-right-color: #84a360;
+    border-bottom-color: #84a360;
+    background: #b0d781 url(img/summer/mt_back.gif) repeat-x;
+}
+
+/* cell styles */
+td {
+    color: #000;
+    border-bottom-color: #e7f2da;
+    border-right-color: #e7f2da;
+}
+
+/* mouseover row style */
+.row-over {
+    background-color: #e7f2da;
+}
+
+/* mouse selectrow style */
+.row-select {
+    color: #fff;
+    background-color: #84a360;
+}
