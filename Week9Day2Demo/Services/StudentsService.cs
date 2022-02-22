@@ -136,9 +136,17 @@ namespace Week9Day2Demo.Services
             using (var connection = new SqlConnection(ConnectionString))
             {
                 // Terrible programmer to write query inside of aspx source code
-                var query = $"insert into Students values({student.RollNo}, {student.Name}, {student.DateOfBirth}, {student.Percentage})";
-                using (var command = new SqlCommand(query, connection))
+                //var query = $"insert into Students values({student.RollNo}, '{student.Name}', '{student.DateOfBirth}', {student.Percentage})";
+
+                using (var command = new SqlCommand("InsertStudent", connection))
                 {
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    command.Parameters.AddWithValue("@RollNo", student.RollNo);
+                    command.Parameters.AddWithValue("@Name", student.Name);
+                    command.Parameters.AddWithValue("@DateOfBirth", student.DateOfBirth);
+                    command.Parameters.AddWithValue("@Percentage", student.Percentage);
+
                     await connection.OpenAsync();
                     await command.ExecuteNonQueryAsync();
                 }

@@ -9,6 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:HyperLink runat="server" id="LinkButtonAddNewStudent" Text="Add New Student" NavigateUrl="AddStudent.aspx" ></asp:HyperLink>
             <asp:GridView ID="GridView1" runat="server" DataKeyNames="RollNo"
                 DataSourceID="ObjectDataSourceStudents" Width="650px"
                 AllowPaging="True" PageSize="3">
@@ -19,7 +20,7 @@
 
             <asp:ObjectDataSource ID="ObjectDataSourceStudents" runat="server"
                 TypeName="Week9Day2Demo.Services.StudentsService" DataObjectTypeName="Week9Day2Demo.Services.Student" 
-                SelectMethod="GetAllStudents" DeleteMethod="Delete" InsertMethod="Insert" UpdateMethod="Update"></asp:ObjectDataSource>
+                SelectMethod="GetAllStudents" DeleteMethod="Delete" UpdateMethod="Update"></asp:ObjectDataSource>
         </div>
     </form>
 </body>
